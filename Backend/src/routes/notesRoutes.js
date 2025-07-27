@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.get("/", getAllNotes);
-router.get("/", getNoteById); // Assuming you have a function to get a note by ID
+router.get("/:id", getNoteById);
 router.post("/", createNote);
 router.put("/:id", updateNote);
 router.delete("/:id", deleteNote);

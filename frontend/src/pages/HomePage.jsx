@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/navbar.jsx'
-import RatelimitedUI from '../components/RatelimitedUI.jsx';
 import axios from 'axios';
 
 const HomePage = () => {
-  const [isratelimited, setIsratelimited] = useState(false);
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +24,6 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-    {isratelimited && <RatelimitedUI />}
     </div>
   )
 }

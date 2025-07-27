@@ -4,7 +4,6 @@ dotenv.config(); // Load environment variables from .env file
 import express from "express";
 import notesRoutes from "./routes/notesRoutes.js";
 import { connectDB } from "./config/db.js"; // Import the connectDB function
-import rateLimiter from "./middlewarefolder/rateLimiter.js";
 import cors from "cors"; // Import CORS middleware
 
 const app = express();
@@ -21,7 +20,6 @@ app.use(express.json());
     next();
 })*/
 
-app.use(rateLimiter); // Apply rate limiting middleware
 app.use(cors(
     {
         origin: "http://localhost:5173", // Allow requests from this origin
