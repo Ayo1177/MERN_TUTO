@@ -26,6 +26,7 @@ app.use(cors(
     }
 )); // Enable CORS for all routes
 
+
 app.use("/api/notes", notesRoutes);
 // each service gets routed to its own file "notesRoutes.js"
 connectDB()
